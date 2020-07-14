@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{% block contents %}
+<body>
+    <div class="container">
+        {% for post in editPost.all %}
+            <div class="card" style="margin: 20px">
+                <div class="card-body">
+                    <h5 class="card-title">{{post.title}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{post.pub_date}}</h6>
+                    <p class="card-text">{{post.body}} </p>
+                    <p><a href="{%url 'detail' post.id%}">..more</a></p>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+</body>
+{%endblock%}

@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{% block contents %}
+<body>
+    <div class="container" style="margin-top: 50px;">
+        <div class="row" >
+            <div class="card-body" style="background-color:lightyellow; border-radius: 10px;">
+                <h1>{{detailpost.title}} </h1>
+                <br><br>
+                <h6 class="card-subtitle mb-2 text-muted">{{detailpost.pub_date}}</h6>
+                <p class="card-text">{{detailpost.body}}</p>
+            </div>
+        </div>
+        <a href="{% url 'home' %}">돌아가기</a>
+    </div>
+</body>    
+{% endblock %}
